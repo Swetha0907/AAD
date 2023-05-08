@@ -1,9 +1,202 @@
 <!-- activity_main-->
+<Relativelayout 
+xmlns:android="http://schemas_android_com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_margin="5dp">
+<TextView
+android:id="@+id/textView1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentTop="true"
+android:layout_centerHorizontal="true"
+android:textAppearance="android: attr/textAppearancelarge"
+android:textColor="#A4C639" />
 
+<TextView
+android:id="@+id/textView2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+d/textView1"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android-text="User Name”
+android:textAppearance="?android:attr/textAppearancelarge"
+android:textColor="#0099FF" />
+
+<EditText
+android: id="@+id/editText1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_ content"
+android:layout_alignBottom="@+id/textView2"
+android:layout_toRightOf="@+id/textView2"
+android:background="#CCCCCC"
+android-ems="10"
+android:inputType="textPersonMame">
+<requestFocus />
+</EditText>
+
+<TextView
+android: id="@+id/textView3"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android: layout_below="@+id/textView2"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android:text="Password"
+android:textAppearance="?android: attritextAppearancelarge"
+android-textColor="#0099FF" />
+<EditText
+android: id="@+id/editText2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignBottom="@+id/textView3"
+android:layout_toRightOf="@+id/textView3"
+android:background="#CCCCCC"
+android-ems="10"
+android: inputType="textPassword">
+</requestFocus >
+
+</EditText>
+
+<TextView
+android: id="@+id/textViewd"
+android:layout_width="wrap content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/textView3"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android-text="Address"
+android:textAppearance="?android:attr/textAppearancelLarge"
+android:textColor="#0099FF" />
+
+<EditText
+android:id="@+id/editText3"
+android:layout_width="wrap_content"
+android:layout_height="wrap_ content"
+android:layout_alignBottom="@+id/textViewd"
+android:layout_toRightOf="@+id/textViewd"
+android:background="#CCCCCC"
+android-ems="10"
+android: inputType="textPersonMName">
+<requestFocus>
+
+</EditText>
+
+<TextView
+android: id="@+id/textViews"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/textViewd"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android:text="Gender"
+android:textAppearance="?android: attr/textAppearancelarge"
+android:textColor="#0099FF" />
+
+<RadiaGroup
+android:id="@+id/r"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignBottom="@+id/textViews"
+android:layout_toRightOf="@+id/textViews"
+android-orientation="horizontal">
+
+<RadioButton
+android: id="@+id/radioButton1"
+android:layout_width="wrap-content"
+android:layout_height="wrap-content"
+android:layout_alignBottom="@+id/textViews"
+android:layout_toRightOf="@+id/textViewd"
+android-text="Male" />
+
+<RadioButton
+android: id="@+id/radioButton2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_ content"
+android:layout_alignBottom="@+id/radioButton1"
+android:layout_toRightOf="@+id/radioButton1"
+android-text="Female" />
+</RadioGroup>
+
+<TextView
+android-id="@-+id/textViews"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@-+id/textViews"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android:text="Date of Birth "
+android:textAppearance="?android:attrtextAppearancelarge"
+android:textColor="#0093FF" />
+
+<EditText
+android-id="@+id/editTextDate2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignBottom="@+id/textViewg"
+android:layout_toRightOf="@+id/textViews"
+android:ems="10"
+android:inputType="date" />
+
+<TextView
+android-id="@-+id/textView7"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@-+id/textViews"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android:text="Age"
+android:textAppearance="?android: attr/textAppearancelLarge"
+android:textColor="#0099FF"/>
+
+<EditText
+android:id="@+id/editText4"
+android:layout_width="wrap_ content"
+android:layout_height="wrap_content”
+android:layout_alignBottom="@+id/textView’"
+android:layout_toRightOf="@+id/textViewT"
+andraid:background="#CCCCCC"
+android:ems="10"
+android:input Type="number"/>
+<requestFocus />
+
+<TextView
+android:id="@+id/textViewd"
+android:layout_width="wrap content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/textView?"
+android:layout_alignParentLeft="true"
+android:layout_marginTop="23dp"
+android:text="State "
+android:textAppearance="7android:attr/textAppearancelLarge"
+android:textColor="#0099FF"/>
+
+<Spinner
+android:id="@+id/spinner"
+android:layout_width="match_parent"
+android:layout_height="wrap_content”
+android:layout_alignBottom="@+id/textViewsd"
+android:layout_toRightOf="@+id/textViews"/>
+
+<Button
+android:id="@+id/button1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/textView4"
+android:layout_alignParentlLeft="trus"
+android:layout_marginLeft="175dp"
+android:layout_marginTop="368dp"
+android:background="#0099FF"
+android:text="Submit"
+android:textColor="#FFFFFF" />
+
+</RelativeLayout=
 
 <!-- MainActivity.java-->
-import android.support.v7.app.AppCompatActivity;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
