@@ -1,4 +1,5 @@
 <!-- activity_main.xml-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -50,6 +51,7 @@ app:layout_constraintTop_toBottomOf="@+id/editText1" />
 
 
 <!--MainActivity.java-->
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -89,3 +91,82 @@ getMenuInflater().inflate(R.menu.menu_main, menu);
 return true;
 }
 }
+
+<Create activity>
+  
+<!--activity_second.xml-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".SecondActivity">
+<TextView
+android:id="@+id/textView1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentStart="true"
+android:layout_alignParentTop="true"
+android:text="uname"
+app:layout_constraintBottom_toTopOf="@+id/textView2"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintVertical_bias="0.628"
+tools:ignore="RtlHardcoded" />
+<TextView
+android:id="@+id/textView2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@+id/textView1"
+android:layout_alignStart="@+id/textView1"
+android:layout_marginBottom="380dp"
+android:text="password"
+app:layout_constraintBottom_toBottomOf="parent"
+
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.498"
+app:layout_constraintStart_toStartOmenu_main.xmlf="parent" />
+</android.support.constraint.ConstraintLayout>
+
+
+<!--SecondActivity.java-->
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.TextView;
+public class SecondActivity extends Activity
+{
+@Override
+protected void onCreate(Bundle savedInstanceState)
+{
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_second);
+TextView tv=(TextView)findViewById(R.id.textView1);
+TextView tv1=(TextView)findViewById(R.id.textView2);
+tv.setText(getIntent().getExtras().getString("uname"));
+tv1.setText(getIntent().getExtras().getString("pwd"));
+}
+@Override
+public boolean onCreateOptionsMenu(Menu menu)
+{
+getMenuInflater().inflate(R.menu.menu_main , menu);
+return true;
+}
+}
+
+<!--menu_main.xml
+Points to create menu_main.xml
+goto app -> res -> rightclick -> Android resource directory -> select resource type as menu click on ok
+menu option will displayed under res
+now right click on menu -> new -> menu resource file -> give file name as menu_main.xml-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/action_camera"
+android:title="Camera"
+app:showAsAction="always" />
+</menu>
